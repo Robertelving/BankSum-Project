@@ -37,4 +37,10 @@ public interface AccountInterface {
      */
     public void setType(AccountType type);
     
+    /**
+     * returns the type of Account.
+     * @return type of Account.
+     */
+    public AccountType getType();
+    
 }

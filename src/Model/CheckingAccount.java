@@ -20,11 +20,6 @@ public class CheckingAccount implements AccountInterface{
         this.type = type;
     }
     
-    /**
-     * Withdraws the amount from AccountBalance and returns amount
-     * @param amount The amount to be withdrawn
-     * @return amount withdrawn
-     */
     @Override
     public BigDecimal withdraw(BigDecimal amount) {
         this.balance = this.balance.subtract(amount);
@@ -46,7 +41,9 @@ public class CheckingAccount implements AccountInterface{
     public void setType(AccountType type) {
         this.type = type;
     }
-    
-    
-    
+
+    @Override
+    public AccountType getType() {
+        return this.type;
+    }
 }
