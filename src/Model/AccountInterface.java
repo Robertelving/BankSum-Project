@@ -30,4 +30,11 @@ public interface AccountInterface {
      * @return Balance of Account
      */
     public BigDecimal getBalance();
+    
+    /**
+     * Set the type of account
+     * @param type Account changed to this type.
+     */
+    public void setType(AccountType type);
+    
 }

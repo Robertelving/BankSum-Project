@@ -9,13 +9,15 @@ import java.math.BigDecimal;
 public class CheckingAccount implements AccountInterface{
 
     private BigDecimal balance;
+    private AccountType type;
 
     public CheckingAccount() {
         this.balance = new BigDecimal("0.00");
     }
     
-    public CheckingAccount(BigDecimal balance) {
+    public CheckingAccount(BigDecimal balance, AccountType type) {
         this.balance = balance;
+        this.type = type;
     }
     
     /**
@@ -39,5 +41,12 @@ public class CheckingAccount implements AccountInterface{
     public BigDecimal getBalance() {
         return this.balance;
     }
+
+    @Override
+    public void setType(AccountType type) {
+        this.type = type;
+    }
+    
+    
     
 }

@@ -29,7 +29,7 @@ public class CheckingAccountTest {
     
     @Before
     public void setUp() {
-        this.instance = new CheckingAccount(new BigDecimal("100.00"));
+        this.instance = new CheckingAccount(new BigDecimal("100.00"), AccountType.CHECKING);
     }
     
     @After
