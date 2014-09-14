@@ -37,12 +37,10 @@ public class CheckingAccount implements AccountInterface{
         return this.balance;
     }
 
-    @Override
     public void setType(AccountType type) {
         this.type = type;
     }
 
-    @Override
     public AccountType getType() {
         return this.type;
     }
