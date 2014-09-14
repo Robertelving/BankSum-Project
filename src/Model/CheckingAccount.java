@@ -10,6 +10,10 @@ public class CheckingAccount implements AccountInterface{
 
     private BigDecimal balance;
 
+    public CheckingAccount() {
+        this.balance = new BigDecimal("0.00");
+    }
+    
     public CheckingAccount(BigDecimal balance) {
         this.balance = balance;
     }
@@ -27,19 +31,13 @@ public class CheckingAccount implements AccountInterface{
 
     @Override
     public Boolean deposit(BigDecimal amount) {
-        return false;
+        this.balance = this.balance.add(amount);
+        return true;
     }
 
-    public static void main(String[] args) {
-        BigDecimal b1 = new BigDecimal("18.56");
-        BigDecimal b2 = new BigDecimal("18.5");
-        System.out.println(b1.abs());
-        System.out.println(b1.add(b2));
-        System.out.println(b1.add(b2));
-        System.out.println(b1.movePointLeft(1));
-        System.out.println(b1);
-        AccountInterface a = new CheckingAccount(new BigDecimal(100.00));
-        
+    @Override
+    public BigDecimal getBalance() {
+        return this.balance;
     }
     
 }
