@@ -3,7 +3,7 @@ BankSum-Project
 
 Budgetmaking tool
 
-The intended idea of this program is a small Budgetplaner.
+The intended idea of this program is a small Budgetplanner.
 
 Future planned implementations
   - Support several types of accounts e.g. Checking,Saving etc.
